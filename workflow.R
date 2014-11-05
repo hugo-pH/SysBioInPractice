@@ -1,3 +1,5 @@
+bulk=read.csv(file = "adh_data_clean.csv", header = T, sep = ",")
+data<-as.numeric(bulk)
 #Normalise by blank
 data$f3a.1=data$f3a.1-data$f3d.1
 data$f3b.1=data$f3b.1-data$f3d.1
