@@ -1,5 +1,6 @@
-bulk=read.csv(file = "adh_data_clean.csv", header = T, sep = ",")
-data<-as.numeric(bulk)
+adh_data_clean <- read.csv("~/R/sysbio/adh_data_clean.csv", dec=",", stringsAsFactors=FALSE)
+data<-adh_data_clean
+
 #Normalise by blank
 data$f3a.1=data$f3a.1-data$f3d.1
 data$f3b.1=data$f3b.1-data$f3d.1
@@ -29,9 +30,9 @@ data<-data/6.22
 data$time<-adh_data_clean$time
 
 
-test<-data.frame(time=data$time, data$f3a.1)
 
 
-ggplot(data=data, aes(x=time, y=f5a.1)) +
+
+ggplot(data=data, aes(x=time, y=f3a.2)) +
   geom_line() 
 #   geom_smooth()
