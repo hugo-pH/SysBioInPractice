@@ -30,9 +30,6 @@ data<-data/6.22
 data$time<-adh_data_clean$time
 
 
-
-
-
 ggplot(data=data, aes(x=time, y=f3a.2)) +
   geom_line() 
 #   geom_smooth()
